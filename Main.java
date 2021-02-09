@@ -3,10 +3,14 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		System.out.println(Calculator.add(10, 20.5));
-		System.out.println(Calculator.subtract(10, 20.5));
-		System.out.println(Calculator.multiply(10, 20.5));
-		System.out.println(Calculator.divide(10, 20.5));
+		//Each of the actions below are separate equations
+		Calculator.add(10, 20.5);
+		Calculator.subtract(10, 20.5);
+		Calculator.multiply(10, 20.5);
+		Calculator.divide(10, 20.5);
+		
+		//Displays all results from previous Calculator calculations
+		Calculator.results.forEach(System.out::println);
 
 	}
 

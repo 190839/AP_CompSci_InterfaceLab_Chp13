@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public abstract class Calculator implements MathMachine {
 	
@@ -5,7 +6,7 @@ public abstract class Calculator implements MathMachine {
 	
 	
 
-//      ░█████╗░░█████╗░██╗░░░░░░█████╗░██╗░░░██╗██╗░░░░░░█████╗░████████╗░█████╗░██████╗░
+ //      ░█████╗░░█████╗░██╗░░░░░░█████╗░██╗░░░██╗██╗░░░░░░█████╗░████████╗░█████╗░██████╗░
 //      ██╔══██╗██╔══██╗██║░░░░░██╔══██╗██║░░░██║██║░░░░░██╔══██╗╚══██╔══╝██╔══██╗██╔══██╗
 //      ██║░░╚═╝███████║██║░░░░░██║░░╚═╝██║░░░██║██║░░░░░███████║░░░██║░░░██║░░██║██████╔╝
 //      ██║░░██╗██╔══██║██║░░░░░██║░░██╗██║░░░██║██║░░░░░██╔══██║░░░██║░░░██║░░██║██╔══██╗
@@ -22,6 +23,8 @@ public abstract class Calculator implements MathMachine {
 
 /*------------------------------------------------------------------------------------------*/
 	
+	public static ArrayList<Number> results = new ArrayList<Number>();
+	
 	
 
 //		▄▀█ █▀▄ █▀▄
@@ -35,8 +38,10 @@ public abstract class Calculator implements MathMachine {
 		
 		double sum = num1+num2;
 		if (Math.round(sum) == sum) {
+			results.add((int)sum);
 			return (int)sum;
 		}else {
+			results.add(sum);
 			return sum;
 		}
 	}
@@ -54,8 +59,10 @@ public abstract class Calculator implements MathMachine {
 		
 		double sum = num1-num2;
 		if (Math.round(sum) == sum) {
+			results.add((int)sum);
 			return (int)sum;
 		}else {
+			results.add(sum);
 			return sum;
 		}
 	}
@@ -74,8 +81,10 @@ public abstract class Calculator implements MathMachine {
 		
 		double total = num1*num2;
 		if (Math.round(total) == total) {
+			results.add((int)total);
 			return (int)total;
 		}else {
+			results.add(total);
 			return total;
 		}
 	}
@@ -94,8 +103,10 @@ public abstract class Calculator implements MathMachine {
 		
 		double dividend = num1/num2;
 		if (Math.round(dividend) == dividend) {
+			results.add((int)dividend);
 			return (int)dividend;
 		}else {
+			results.add(dividend);
 			return dividend;
 		}
 	}
