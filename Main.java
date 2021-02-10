@@ -1,17 +1,57 @@
+import java.util.Scanner;
 
 public class Main {
 
 	public static void main(String[] args) {
 		
-		//Each of the actions below are separate equations
-		Calculator.add(10, 20.5);
-		Calculator.subtract(10, 20.5);
-		Calculator.multiply(10, 20.5);
-		Calculator.divide(10, 20.5);
 		
-		//Displays all results from previous Calculator calculations
-		Calculator.results.forEach(System.out::println);
+		Scanner sc = new Scanner(System.in);
+		int n = 0;
+		boolean a = false;
+		
+		
+		while (!a) {
+			try {
+				System.out.print("How many calculations would you like to conduct? ");
+				n = sc.nextInt();
+				a=true;
+			}catch(Exception e) {
+				System.out.println("Just a number  (integer) please. Try again...");
+				a=false;
+			}
+		}
+		
+		
+		
 
+		int numberOfCalculations = n;
+		
+		clearConsole();
+		for (int i=0; i<numberOfCalculations; i++) {
+			calculationSequence cs = new calculationSequence();
+			cs.start();
+
+		}
+		
+		
+		
+		
+		
+		
+		
+			
+	//End of main method
 	}
-
+	
+	
+	
+	
+	public static void clearConsole() {
+		for (int i = 0; i<1000; i++) {
+			System.out.println("\n");
+		}
+	}
+	
+	
+//End of Main class
 }
